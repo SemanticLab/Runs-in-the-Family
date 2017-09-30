@@ -1,0 +1,717 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns:page="http://www.exlibrisgroup.com/voyager/webvoyage/page" xmlns:req="http://www.endinfosys.com/Voyager/requests" xmlns:fo="http://www.w3.org/1999/XSL/Format" lang="en">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="refresh" content="1200;url=exit.do">
+    <title>Classic Catalog Titles</title>
+    <script src="ui/x/jscripts/ajaxUtils.js" type="text/javascript"></script><script src="ui/x/jscripts/pageInputFocus.js" type="text/javascript"></script><script src="ui/x/jscripts/jquery-1.3.2.js" type="text/javascript"></script><script src="ui/x/jscripts/jquery-ui-1.7.2.custom.min.js" type="text/javascript"></script><script src="ui/x/jscripts/subj.jquery.js" type="text/javascript"></script><script src="ui/x/jscripts/jquery-timeout.js" type="text/javascript"></script>
+    <style media="screen,print" type="text/css">@import "ui/x/css/jqueryui/jquery-ui-1.7.2.custom.css";</style>
+    <script src="ui/x/jscripts/imageUtils.js" type="text/javascript"></script>
+    <noscript></noscript>
+    <style media="screen,print" type="text/css">@import "ui/x/css/frameWork.css";</style>
+    <style media="screen,print" type="text/css">@import "ui/x/css/header.css";</style>
+    <style media="screen,print" type="text/css">@import "ui/x/css/quickSearchBar.css";</style>
+    <style media="screen,print" type="text/css">@import "ui/x/css/pageProperties.css";</style>
+    <style media="screen,print" type="text/css">@import "ui/x/css/resultsFacets.css";</style>
+    <style media="screen,print" type="text/css">@import "ui/x/css/resultsTitles.css";</style>
+    <style media="screen,print" type="text/css">@import "ui/x/css/highlight.css";</style><!--[if IE]><style media="screen,print" type="text/css">@import "ui/x/css/ieFixes.css";</style><![endif]--><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16998441-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+  <body onLoad="setFocus('page.searchResults.titles');//timedMsg(20, 2, 'Your session will end in 2 minutes!')" class="frameWorkUI">
+    <div id="pageContainer">
+      <a accesskey="1" href="#mainContent"></a><a accesskey="2" href="#searchnavbar"></a><a accesskey="3" href="#mainNav"></a>
+      <div id="pageHeader">
+        <div id="headerRow">
+          <div title="Library Homepage" id="logo">
+            <a></a><a alt="Tulane Libraries Homepage" href="http://library.tulane.edu"><img src="ui/x/images/libraries_header.png" alt="Howard Tilton Homepage"></a>
+          </div>
+        </div>
+        <div id="subNav">
+          <div id="snLinks">
+            <ul>
+              <li class="first">
+                <a href="/vwebv/searchBasic">New Search</a>
+              </li>
+              <li>
+                <a href="/vwebv/myAccount">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div title="Quick Search Bar" id="quickSearchBar">
+        <form method="get" action="search">
+          <span title="New Search :" id="quickSearchArg"><td id="searchArgLabel"><label for="searchArg">New Search :</label></td><td id="searchArgInput"><input title="Please enter search term(s)." id="searchArg" name="searchArg" class="inputStyle" size="36" type="text"></td></span><span title="Submit search the library" id="searchButton"><input id="quickSearchButton" value="Go" alt="Submit search the library" type="submit"></span><span title="Search History" id="searchHistory"><span id="searchHistoryIcon">&nbsp;</span><span id="spanpage.searchQuick.searchHistory.link"><a title="Search History" href="searchHistory">Search History</a></span></span><input value="GKEY^*" name="searchCode" type="hidden"><input value="0" name="searchType" type="hidden"><input value="50" name="recCount" type="hidden">
+        </form>
+      </div>
+      <div id="mainContent">
+        <a name="mainContent"></a>
+        <noscript>
+          <h2 class="accessibilityHeader">Notice: This web application times out 20 minutes after loading a page.</h2>
+        </noscript>
+        <form id="resultsForm" method="GET" action="titlesUpd">
+          <div class="resultsTitleForm">
+            <div class="resultsHeader">
+              <label for="returnUrl"><input type="hidden" id="returnUrl" name="returnUrl" value="searchResults?searchId=40&amp;recPointer=50"></label><label for="searchId"><input type="hidden" id="searchId" name="searchId" value="40"></label><label for="recPointer"><input type="hidden" id="recPointer" name="recPointer" value="50"></label><label for="recCount"><input type="hidden" id="recCount" name="recCount" value="50"></label>
+              <div class="resultsHeaderHeader">
+                <span>77&nbsp;results found</span>
+              </div>
+              <div class="searchTerms">
+                <span>Keyword Anywhere(batiste)(MEDI=s)</span>
+              </div>
+              <div class="actions">
+                <h2 class="nav">Search Action Navigation</h2>
+                <ul class="navbar">
+                  <li>
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Edit Search" name="EditSearchServlet" type="submit" class="yellowBtn" id="EditSearchServlet"><span class="yellowBtnRight">&nbsp;</span>
+                  </li>
+                  <li>
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Save Search" name="SaveSearchAddServlet" type="submit" class="yellowBtn" id="SaveSearchAddServlet"><span class="yellowBtnRight">&nbsp;</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="jumpBarNavTop">
+              <div id="jumpBarContent">
+                <h2 class="nav">Jumpbar Result Navigation</h2>
+                <ul class="jumpBar">
+                  <li class="jumpBarTabLeft">
+                    <a href="searchResults?searchId=40&amp;recPointer=0&amp;recCount=50" class="jumpBarPrevious"><span class="jumpBarLeft">&nbsp;</span><span class="jumpBarArrowLeft">&nbsp;</span><span class="jumpBarButton">Prev</span><span class="jumpBarEndCap">&nbsp;</span></a>
+                  </li>
+                  <li class="jumpBarMiddle">
+                    <a href="searchResults?searchId=40&amp;recPointer=0&amp;recCount=50" class="jumpBarLink"><span>1</span></a><span class="jumpBarLabelSelected">2</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="browseHeaderTop">
+              <div class="browseHeader">
+                <h2 class="nav">Results action navigation bar</h2>
+                <ul>
+                  <li id="top_link_page.searchResults.browseBar.print.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Print" name="PrintDialogServlet" type="submit" class="yellowBtn" id="top_page.searchResults.browseBar.print.button"><span class="yellowBtnRight">&nbsp;</span><span class="horzLine">&nbsp;</span>
+                  </li>
+                  <li id="top_link_page.searchResults.browseBar.export.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Export" name="ExportDialogServlet" type="submit" class="yellowBtn" id="top_page.searchResults.browseBar.export.button"><span class="yellowBtnRight">&nbsp;</span><span class="horzLine">&nbsp;</span>
+                  </li>
+                  <li id="top_link_page.searchResults.browseBar.email.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="E-mail" name="EmailDialogServlet" type="submit" class="yellowBtn" id="top_page.searchResults.browseBar.email.button"><span class="yellowBtnRight">&nbsp;</span><span class="horzLine">&nbsp;</span>
+                  </li>
+                  <li id="top_link_page.searchResults.browseBar.addToList.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Add to List" name="AddToList" type="submit" class="yellowBtn" id="top_page.searchResults.browseBar.addToList.button"><span class="yellowBtnRight">&nbsp;</span><span class="horzLine">&nbsp;</span>
+                  </li>
+                  <li id="top_link_page.searchResults.browseBar.update.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Update" name="update" type="submit" class="yellowBtn" id="top_page.searchResults.browseBar.update.button"><span class="yellowBtnRight">&nbsp;</span><span class="endLine">&nbsp;</span>
+                  </li>
+                  <script type="text/javascript">removeUpdateBtn();</script>
+                  <li>
+                    <div class="selectChkBox">
+                      <span class="fieldBold">Select</span><input onClick="selectPageCheckbox(document.getElementById('resultsForm'),this)" value="page" name="page" type="checkbox" id="page"><label for="page">Page</label><input value="2771636,3414381,1977093,2584390,2235084,2249279,2331603,2405261,3108436,2858757,2375015,2207637,2216642,2530649,2286626,1064690,3233572,2311840,3528777,3528815,2282890,2858753,2841329,2285795,2345104,2285785,936380," type="hidden" name="pageIds"><input onClick="selectAllCheckbox(document.getElementById('resultsForm'),this)" value="cbxAll" name="cbxAll" type="checkbox" id="cbxAll"><label for="cbxAll">All</label>
+                    </div>
+                  </li>
+                </ul>
+                <div class="browseBarSortBy">
+                  <td class="ddlabel"><label for="sortBy">Sort By:</label></td> <td><select title="" class="" onchange="sortBySubmit(this)" name="sortBy" id="sortBy"><option value="AUTHOR">Author</option><option value="TITLE">Title</option><option value="PUB_DATE">Publication Date</option><option value="PUB_DATE_DESC">Publication Date Descending</option><option selected value=""></option></select></td>
+                </div>
+              </div>
+            </div>
+            <div id="theResults">
+              <div id="resultList">
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2771636" value="2771636" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=50&amp;bibId=2771636">Doin it [sound recording] / Papa Grows Funk.</a>
+                      </div>
+                      <div class="line2Link">[2001]&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">M-CD 2010- 04688&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Music &amp; Media (Sound recordings)</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="3414381" value="3414381" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=51&amp;bibId=3414381">Doreen's Jazz New Orleans. Volume XII, Jackson Square jam! [sound recording].</a>
+                      </div>
+                      <div class="line2Link">[2001]&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD DJNO SMGDK 31501&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="1977093" value="1977093" name="titles" type="checkbox">
+                    <br>
+                    <img title="Book" alt="Book Icon" src="ui/x/images/bibFormat/icon_book.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=52&amp;bibId=1977093">Great Olympia Band / by Mick Burns.</a>
+                      </div>
+                      <div class="line2Link">c2001.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">ML 1311.7 .L7 B87 2001&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                    <div class="resultListCoverImageCell">
+                      <img onload="checkImage(this)" alt="Cover Image" class="resultListCoverImage" src="http://www.syndetics.com/hw7.pl?isbn=0963889087/SC.jpg"></div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2584390" value="2584390" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=53&amp;bibId=2584390">Live at the Old Point [sound recording] / Bonerama.</a>
+                      </div>
+                      <div class="line2Link">p2001.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">M-CD 2009- 5715&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Music &amp; Media (Sound recordings)</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2235084" value="2235084" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=54&amp;bibId=2235084">Saturday night fish fry [sound recording] : New Orleans funk and soul.</a>
+                      </div>
+                      <div class="line2Link">p2001.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD SoulJazz SJR CD53&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2249279" value="2249279" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=55&amp;bibId=2249279">WWOZ on CD. A funky miracle [sound recording].</a>
+                      </div>
+                      <div class="line2Link">c2000.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD WWOZ Sounds v.14&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2331603" value="2331603" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=56&amp;bibId=2331603">Buck jump [sound recording] / The Dirty Dozen Brass Band.</a>
+                      </div>
+                      <div class="line2Link">p1999.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">
+                        <span class="multiHoldings"></span>multiple holdings available</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2405261" value="2405261" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=57&amp;bibId=2405261">Concertos from my childhood [sound recording].</a>
+                      </div>
+                      <div class="line2Link">p1999.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">M-CD 2008- 1641&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Music &amp; Media (Sound recordings)</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="3108436" value="3108436" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=58&amp;bibId=3108436">Songs, words and messages connections [sound recording] / Alvin Batiste.</a>
+                      </div>
+                      <div class="line2Link">[1999]&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD SLM Records SLM-3&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2858757" value="2858757" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=59&amp;bibId=2858757">Organ dreams. 1 [electronic resource].</a>
+                      </div>
+                      <div class="line2Link">p1998.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="noItem"></span> Internet</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2375015" value="2375015" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=60&amp;bibId=2375015">Marlon's mode [sound recording] / Marlon Jordan.</a>
+                      </div>
+                      <div class="line2Link">p1997.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">M-CD J420neOr JorMar 1997&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Music &amp; Media (Sound recordings)</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2207637" value="2207637" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=61&amp;bibId=2207637">Doin' the Riverwalk [sound recording] / The Riverwalk Jazz Band.</a>
+                      </div>
+                      <div class="line2Link">c1995.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD Riverwalk Jazz Band 1995&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2216642" value="2216642" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=62&amp;bibId=2216642">Gimme my money back! [sound recording] / the Tremè Brass Band.</a>
+                      </div>
+                      <div class="line2Link">p1995.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">
+                        <span class="multiHoldings"></span>multiple holdings available</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2530649" value="2530649" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=63&amp;bibId=2530649">WWOZ on CD. Live from JazzFest [sound recording].</a>
+                      </div>
+                      <div class="line2Link">p1995.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">M-CD 2010- 01868 v.3&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Music &amp; Media (Sound recordings)</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2286626" value="2286626" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=64&amp;bibId=2286626">Boogie live-- 1958 [sound recording] / featuring Ed Blackwell and AJQ-2.</a>
+                      </div>
+                      <div class="line2Link">p1994.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">
+                        <span class="multiHoldings"></span>multiple holdings available</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="1064690" value="1064690" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=65&amp;bibId=1064690">Follow me chicken [sound recording] / Nathan &amp; the Zydeco Cha-Chas.</a>
+                      </div>
+                      <div class="line2Link">p1993.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">
+                        <span class="multiHoldings"></span>multiple holdings available</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="3233572" value="3233572" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=66&amp;bibId=3233572">Jazz gumbo [sound recording].</a>
+                      </div>
+                      <div class="line2Link">[1993?]&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD Jazz Crusade JCCD 3004-5&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="multiItem"></span>multiple items available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2311840" value="2311840" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=67&amp;bibId=2311840">Jelly [sound recording] / Dirty Dozen Brass Band.</a>
+                      </div>
+                      <div class="line2Link">p1993.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD Columbia CK53214&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="3528777" value="3528777" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=68&amp;bibId=3528777">New Orleans jazz classics [sound recording] : a tribute to Louis Armstrong / featuring the Young Olmpians.</a>
+                      </div>
+                      <div class="line2Link">p1993.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD Mardi Gras Records MG1016&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="3528815" value="3528815" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=69&amp;bibId=3528815">From bad to badder [sound recording] / the American Jazz Quintet.</a>
+                      </div>
+                      <div class="line2Link">p1992.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD Black Saint 120114-2&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2282890" value="2282890" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=70&amp;bibId=2282890">In the beginning [sound recording] / American Jazz Quintet.</a>
+                      </div>
+                      <div class="line2Link">[1991]&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">
+                        <span class="multiHoldings"></span>multiple holdings available</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2858753" value="2858753" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=71&amp;bibId=2858753">Organ fireworks. III [electronic resource].</a>
+                      </div>
+                      <div class="line2Link">p1991.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="noItem"></span> Internet</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2841329" value="2841329" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=72&amp;bibId=2841329">Carnaval des steel bands, Trinidad [sound recording] = Steel band carnival, Trinidad.</a>
+                      </div>
+                      <div class="line2Link">p1990.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">M-CD 2010- 08140&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Music &amp; Media (Sound recordings)</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2285795" value="2285795" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=73&amp;bibId=2285795">New Orleans album [sound recording] / the Dirty Dozen Brass Band.</a>
+                      </div>
+                      <div class="line2Link">p1990.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD Columbia CK45414&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2345104" value="2345104" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=74&amp;bibId=2345104">Willie Humphrey meets Maryland Jazz Band of Cologne [sound recording].</a>
+                      </div>
+                      <div class="line2Link">p1990.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD DuBat 41991&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="evenRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="2285785" value="2285785" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=75&amp;bibId=2285785">Voodoo [sound recording] / The Dirty Dozen Brass Band.</a>
+                      </div>
+                      <div class="line2Link">p1989.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">JACD Columbia CK45042&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Jones Hall Jazz</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oddRow">
+                  <div class="resultListCheckBox">
+                    <input onClick="selectTitleChkBx(document.getElementById('resultsForm'))" id="936380" value="936380" name="titles" type="checkbox">
+                    <br>
+                    <img title="Music" alt="Music Icon" src="ui/x/images/bibFormat/icon_music.gif"></div>
+                  <div class="resultListCellBlock">
+                    <div class="resultListTextCell">
+                      <div class="line1Link">
+                        <a href="holdingsInfo?searchId=40&amp;recCount=50&amp;recPointer=76&amp;bibId=936380">Best of New Orleans jazz [sound recording] / Dejan's Olympia Brass Band.</a>
+                      </div>
+                      <div class="line2Link">c1987.&nbsp;</div>
+                      <div class="line3Link">Howard-Tilton&nbsp;</div>
+                      <div class="line4Link">M-CD J420neOr DeOlBB 1987&nbsp;</div>
+                      <div class="line5Link">
+                        <span class="available"></span>available, Music &amp; Media (Preservation)</div>
+                      <div class="databaseName"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="browseHeaderbottom">
+              <div class="browseHeader">
+                <h2 class="nav">Results action navigation bar</h2>
+                <ul>
+                  <li id="bottom_link_page.searchResults.browseBar.print.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Print" name="PrintDialogServlet" type="submit" class="yellowBtn" id="bottom_page.searchResults.browseBar.print.button"><span class="yellowBtnRight">&nbsp;</span><span class="horzLine">&nbsp;</span>
+                  </li>
+                  <li id="bottom_link_page.searchResults.browseBar.export.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Export" name="ExportDialogServlet" type="submit" class="yellowBtn" id="bottom_page.searchResults.browseBar.export.button"><span class="yellowBtnRight">&nbsp;</span><span class="horzLine">&nbsp;</span>
+                  </li>
+                  <li id="bottom_link_page.searchResults.browseBar.email.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="E-mail" name="EmailDialogServlet" type="submit" class="yellowBtn" id="bottom_page.searchResults.browseBar.email.button"><span class="yellowBtnRight">&nbsp;</span><span class="horzLine">&nbsp;</span>
+                  </li>
+                  <li id="bottom_link_page.searchResults.browseBar.addToList.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Add to List" name="AddToList" type="submit" class="yellowBtn" id="bottom_page.searchResults.browseBar.addToList.button"><span class="yellowBtnRight">&nbsp;</span><span class="horzLine">&nbsp;</span>
+                  </li>
+                  <li id="bottom_link_page.searchResults.browseBar.update.button">
+                    <span class="yellowBtnLeft">&nbsp;</span><input value="Update" name="update" type="submit" class="yellowBtn" id="bottom_page.searchResults.browseBar.update.button"><span class="yellowBtnRight">&nbsp;</span><span class="endLine">&nbsp;</span>
+                  </li>
+                  <script type="text/javascript">removeUpdateBtn();</script>
+                  <li>
+                    <div class="selectChkBox">
+                      <span class="fieldBold">Select</span><input onClick="selectPageCheckbox(document.getElementById('resultsForm'),this)" value="page" name="page" type="checkbox" id="page"><label for="page">Page</label><input value="2771636,3414381,1977093,2584390,2235084,2249279,2331603,2405261,3108436,2858757,2375015,2207637,2216642,2530649,2286626,1064690,3233572,2311840,3528777,3528815,2282890,2858753,2841329,2285795,2345104,2285785,936380," type="hidden" name="pageIds"><input onClick="selectAllCheckbox(document.getElementById('resultsForm'),this)" value="cbxAll" name="cbxAll" type="checkbox" id="cbxAll"><label for="cbxAll">All</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="jumpBarNavBottom">
+              <div id="jumpBarContent">
+                <h2 class="nav">Jumpbar Result Navigation</h2>
+                <ul class="jumpBar">
+                  <li class="jumpBarTabLeft">
+                    <a href="searchResults?searchId=40&amp;recPointer=0&amp;recCount=50" class="jumpBarPrevious"><span class="jumpBarLeft">&nbsp;</span><span class="jumpBarArrowLeft">&nbsp;</span><span class="jumpBarButton">Prev</span><span class="jumpBarEndCap">&nbsp;</span></a>
+                  </li>
+                  <li class="jumpBarMiddle">
+                    <a href="searchResults?searchId=40&amp;recPointer=0&amp;recCount=50" class="jumpBarLink"><span>1</span></a><span class="jumpBarLabelSelected">2</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="pageFooter">
+        <div title="Footer Navigation Bar" id="footerTabs">
+          <a name="navFooter"></a>
+          <h2 class="navFooter">Footer Navigation Bar</h2>
+          <ul class="navbar">
+            <li>
+              <a target="_newWin" title="Tulane Libraries" href="http://library.tulane.edu/libraries">Tulane Libraries</a>
+            </li>
+            <li>
+              <a title="Mobile Version" href="/vwebv/searchBasic?sk=mobile">Mobile Catalog</a>
+            </li>
+            <li title="Search the library" class="off">
+              <a id="page.footer.buttons.search.button" name="page.footer.buttons.search.button" href="searchBasic"><span>Search</span></a>
+            </li>
+            <li title="My search list" class="off">
+              <a id="page.footer.buttons.mySearches.button" name="page.footer.buttons.mySearches.button" href="mySearch"><span>My Searches</span></a>
+            </li>
+            <li title="My book list" class="off">
+              <a id="page.footer.buttons.myList.button" name="page.footer.buttons.myList.button" href="myList"><span>My List</span></a>
+            </li>
+            <li title="My account information" class="off">
+              <a id="page.footer.buttons.myAccount.button" name="page.footer.buttons.myAccount.button" href="myAccount"><span>My Account</span></a>
+            </li>
+            <li title="Help on searching the library catalog" class="off">
+              <a id="page.footer.buttons.help.button" name="page.footer.buttons.help.button" href="ui/x/htdocs/help/searchResultsTitles.html" target="_newWin"><span>Help</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
