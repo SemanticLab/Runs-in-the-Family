@@ -1,0 +1,27 @@
+task: retrieve musician names from one of many possible metadata fields and write to csv along with discography info
+
+1. open csv which contains links
+2. loop through rows and open each link
+3. for each link, extract musician name from one of following metadata fields
+  1. 'Other Author(s):'
+
+  2. 'Participant/Performer:' e.g. <span class="fieldLabelSpan">Participant/Performer:</span><span class="subfieldData Location" id="Participant/Performer:">American Jazz Quintet (Ellis Marsalis, Jr., piano ; Harold Battiste, tenor sax ; Alvin Batiste, clarinet ; Ed Blackwell, drums ; Richard Payne and William Swanson, bass).<br>
+                    </span>
+
+      Solution:     for span in soup.find_all('span', id='Participant/Performer:'):
+                        if 'tiste' in span.text:
+                        print(span.text)
+
+  3. 'Contents:'
+
+  4. 'Author:' e.g. <span class="subfieldData Location" id="Author:"><a href="search?searchArg=Batiste, Alvin.&amp;searchCode=NAME&amp;searchType=4">Batiste, Alvin.</a>
+                      <br>
+                    </span>
+
+      Solution:     for span in soup.find_all('span', id='Author:'):
+                        if 'tiste' in span.text:
+                        print(span.text)
+  5. 'Title'
+
+4. for each link, extract metadata field 'Title:'
+5. write musician name and recording title to each row of output csv
