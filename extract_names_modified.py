@@ -8,12 +8,6 @@ with open('search_links.csv') as data:
 
     urls = csv.reader(data)
 
-    # title = []
-    # authors = []
-    # participant_performer = []
-    # contents = []
-    # other_authors = []
-
     all_data = []
 
     for url in urls:
@@ -27,7 +21,7 @@ with open('search_links.csv') as data:
         other_authors=[]
 
         source = urllib.request.urlopen(link).read()
-        soup = bs.BeautifulSoup(source, 'html.parser') # why lxml?
+        soup = bs.BeautifulSoup(source, 'html.parser')
 
         for span in soup.find_all('span', id='Title:'):
             if span.text != None:
