@@ -1,17 +1,21 @@
 import bs4 as bs
 import urllib.request
-import csv
+import csv, re, json
 
+three_families_union = re.compile('[B,b]a{0,1}[a,p,t]tiste')
+discography_dict_list = []
+
+authors = 'N/A'
+# def find_the_batiste (html_content, output_list):
+#     batiste_search = three_families_union.search(html_content)
+#     if batiste_search != None:
+#         output_list.append(html_content.text)
+#     else:
+#         output_list.append('N/A')
 
 with open('search_links.csv') as data:
 
     urls = csv.reader(data)
-
-    title = []
-    authors = []
-    participant_performer = []
-    contents = []
-    other_authors = []
 
     for url in urls:
         link = url[0]
@@ -19,37 +23,61 @@ with open('search_links.csv') as data:
         source = urllib.request.urlopen(link).read()
         soup = bs.BeautifulSoup(source, 'lxml')
 
+        batiste_info = []
+
         for span in soup.find_all('span', id='Title:'):
-            if span.text != None:
-                title.append(span.text)
-            else:
-                title.append('N/A')
+            title = span.text
+
+            batiste_title = three_families_union.search(span.text)
+            if batiste_title != None:
+                batiste_info.append('title: {0}'.format(span.text))
+
+
         for span in soup.find_all('span', id='Author:'):
-            if 'tiste' in span.text:
-                authors.append(span.text)
-            else:
-                authors.append('N/A')
+            authors = span.text
+
+            batiste_author = three_families_union.search(span.text)
+            if batiste_author != None:
+                batiste_info.append('authors: {0}'.format(span.text))
+
         for span in soup.find_all('span', id='Participant/Performer:'):
-            if 'tiste' in span.text:
-                participant_performer.append(span.text)
-            else:
-                participant_performer.append('N/A')
+            participants_performers = span.text
+
+            batiste_participant_performer = three_families_union.search(span.text)
+            if batiste_participant_performer != None:
+                batiste_info.append('participants performers: {0}'.format(span.text))
+
         for span in soup.find_all('span', id='Contents:'):
-            if 'tiste' in span.text:
-                contents.append(span.text)
-            else:
-                contents.append('N/A')
+            contents = span.text
+
+            batiste_contents = three_families_union.search(span.text)
+            if batiste_contents != None:
+                batiste_info.append('contents: {0}'.format(span.text))
+
         for span in soup.find_all('span', id='Other Author(s):'):
-            if 'tiste' in span.text:
-                other_authors.append(span.text)
-            else:
-                other_authors.append('N/A')
+            other_authors = span.text
+            batiste_other_authors = three_families_union.search(span.text)
+            if batiste_other_authors != None:
+                batiste_info.append('other authors: {0}'.format(span.text))
 
-    with open('musician_names.csv', 'w') as output:
-        writer = csv.writer(output)
+        discography_dict = {'url': link,
+        'title': title,
+        'authors': authors,
+        'participants performers': participants_performers,
+        'contents': contents,
+        'other authors': other_authors,
+        'batiste info': batiste_info}
 
-        rows = zip(title, authors, participant_performer, contents, other_authors)
+        print(discography_dict)
+        discography_dict_list.append(discography_dict)
 
-        output.write('Title, Authors, Participant/Performer, Contents, Other_Authors,\n')
-        for row in rows:
-            writer.writerow(row)
+json.dump(discography_dict_list, open('musician_names.json', 'w'), indent=4)
+
+    # with open('musician_names.csv', 'w') as output:
+    #     writer = csv.writer(output)
+    #
+    #     rows = zip(title, authors, participants_performers, contents, other_authors)
+    #
+    #     output.write('Title, Authors, Participants/Performers, Contents, Other_Authors,\n')
+    #     for row in rows:
+    #         writer.writerow(row)
