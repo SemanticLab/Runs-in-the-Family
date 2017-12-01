@@ -2,7 +2,7 @@ import bs4 as bs
 import urllib.request
 import csv, re, json
 
-three_families_union = re.compile('[B,b]a{0,1}[a,p,t]tiste')
+three_families_union = re.compile(' [B,b]a{0,1}[a,p,t]tiste')
 discography_dict_list = []
 
 authors = 'N/A'
@@ -21,7 +21,7 @@ with open('search_links.csv') as data:
         link = url[0]
 
         source = urllib.request.urlopen(link).read()
-        soup = bs.BeautifulSoup(source, 'lxml')
+        soup = bs.BeautifulSoup(source, 'html.parser')
 
         batiste_info = []
 
@@ -68,9 +68,12 @@ with open('search_links.csv') as data:
         'other authors': other_authors,
         'batiste info': batiste_info}
 
-        print(discography_dict)
+
         discography_dict_list.append(discography_dict)
 
+
+disc_dict_list_dedupe = [dict(t) for t in set([tuple(d.items()) for d in discography_dict_list])]
+print(disc_dict_list_dedupe)
 json.dump(discography_dict_list, open('musician_names.json', 'w'), indent=4)
 
     # with open('musician_names.csv', 'w') as output:
