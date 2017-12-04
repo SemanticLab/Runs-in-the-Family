@@ -60,6 +60,7 @@ with open('search_links.csv') as data:
             if batiste_other_authors != None:
                 batiste_info.append('other authors: {0}'.format(span.text))
 
+
         discography_dict = {'url': link,
         'title': title,
         'authors': authors,
@@ -70,7 +71,6 @@ with open('search_links.csv') as data:
 
 
         discography_dict_list.append(discography_dict)
-
 
 disc_dict_list_dedupe = [dict(t) for t in set([tuple(d.items()) for d in discography_dict_list])]
 print(disc_dict_list_dedupe)

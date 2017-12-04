@@ -13,6 +13,23 @@ p2d = re.compile("[A-Z]\w+ [A-Z]\. Ba{0,1}[a,p,t]tiste, [J,S]r.")
 p2e = re.compile('[A-Z]\w+ \\"[A-Z]\w+\\" Ba{0,1}[a,p,t]tiste')
 p2f = re.compile('[A-Z]\w+ \\"[A-Z]\w+\\" Ba{0,1}[a,p,t]tiste, [J,S]r.')
 p2g = re.compile("[A-Z]\. Ba{0,1}[a,p,t]tiste")
+p2h = re.compile("[A-Z]\w+ \([A-Z]\w+\) Ba{0,1}[a,p,t]tiste")
+
+p1x = re.compile("Ba{0,1}[a,p,t]tiste, [A-Z]\w\w+")
+p2x = re.compile("[A-Z]\w+ Ba{0,1}[a,p,t]tiste")
+
+last_name = re.compile("Ba{0,1}[a,p,t]tiste")
+first_middle_name = re.compile(".+(?=\sBa{0,1}[a,p,t]tiste)")
+suffix = re.compile("[J,S]r.")
+
+the = re.compile("[T,t]he ")
+shamarr = re.compile("Shamarr")
+porter = re.compile("Porter")
+kraig = re.compile("Kraig")
+nemours = re.compile("Nemours")
+raymond = re.compile("Raymond")
+dwayne = re.compile("Dwayne")
+clint = re.compile("Clint")
 
 recording_list = []
 
@@ -21,6 +38,7 @@ data = json.load(open('musician_names.json'))
 
 for recording in data:
     names = []
+    formatted_names = []
     batiste_info = recording['batiste info']
     for i in batiste_info:
         p1_results = p1.search(i)
@@ -67,8 +85,55 @@ for recording in data:
         if p2g_results != None:
             names.append(p2g_results.group())
 
-    recording['batiste names'] = names
-    recording_list.append(recording)
+        p2h_results = p2h.search(i)
+        if p2h_results != None:
+            names.append(p2h_results.group())
+
+
+        for name in names:
+            name = re.sub('\"', '', name)
+
+            p2x_results = p2x.search(name)
+
+            the_result = the.search(name)
+            shamarr_result = shamarr.search(name)
+            porter_result = porter.search(name)
+            kraig_result = kraig.search(name)
+            nemours_result = nemours.search(name)
+            raymond_result = raymond.search(name)
+            dwayne_result = dwayne.search(name)
+            clint_result = clint.search(name)
+
+            if the_result == None:
+                if shamarr_result == None:
+                    if porter_result == None:
+                        if kraig_result == None:
+                            if nemours_result == None:
+                                if raymond_result == None:
+                                    if dwayne_result == None:
+                                        if clint_result == None:
+
+                                            if p2x_results != None:
+
+                                                last_name_result = last_name.search(name)
+                                                first_middle_name_result = first_middle_name.search(name)
+                                                suffix_result = suffix.search(name)
+
+                                                if suffix_result != None:
+                                                    formatted_names.append("{0}, {1} {2}".format(last_name_result[0], first_middle_name_result[0], suffix_result[0]))
+                                                else:
+                                                    formatted_names.append("{0}, {1}".format(last_name_result[0], first_middle_name_result[0]))
+
+                                            else:
+                                                formatted_names.append(name)
+
+    formatted_names = set(formatted_names)
+    formatted_names = list(formatted_names)
+
+    if formatted_names != []:
+        recording['batiste names'] = formatted_names
+        recording_list.append(recording)
+
 
 json.dump(recording_list, open('musician_names_filtered.json', 'w'), indent=4)
 
