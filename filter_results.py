@@ -32,7 +32,7 @@ dwayne = re.compile("Dwayne")
 clint = re.compile("Clint")
 
 recording_list = []
-
+all_formatted_names = []
 
 data = json.load(open('musician_names.json'))
 
@@ -126,6 +126,9 @@ for recording in data:
 
                                             else:
                                                 formatted_names.append(name)
+
+
+
 
     formatted_names = set(formatted_names)
     formatted_names = list(formatted_names)

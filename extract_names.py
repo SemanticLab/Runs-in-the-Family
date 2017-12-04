@@ -3,6 +3,7 @@ import urllib.request
 import csv, re, json
 
 three_families_union = re.compile(' [B,b]a{0,1}[a,p,t]tiste')
+four_digit_year = re.compile('[0-9]{4}')
 discography_dict_list = []
 
 authors = 'N/A'
@@ -56,25 +57,49 @@ with open('search_links.csv') as data:
 
         for span in soup.find_all('span', id='Other Author(s):'):
             other_authors = span.text
+
             batiste_other_authors = three_families_union.search(span.text)
             if batiste_other_authors != None:
                 batiste_info.append('other authors: {0}'.format(span.text))
 
+        for span in soup.find_all('span', id='Published:'):
+            published = span.text
+
+            publication_date = four_digit_year.search(published)
+            publication_date = int(publication_date[0])
 
         discography_dict = {'url': link,
         'title': title,
         'authors': authors,
+        'publication date': publication_date,
         'participants performers': participants_performers,
         'contents': contents,
         'other authors': other_authors,
         'batiste info': batiste_info}
 
+        print(discography_dict)
 
         discography_dict_list.append(discography_dict)
 
-disc_dict_list_dedupe = [dict(t) for t in set([tuple(d.items()) for d in discography_dict_list])]
-print(disc_dict_list_dedupe)
+# disc_dict_list_dedupe = [dict(t) for t in set([tuple(d.items()) for d in discography_dict_list])]
+
 json.dump(discography_dict_list, open('musician_names.json', 'w'), indent=4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     # with open('musician_names.csv', 'w') as output:
     #     writer = csv.writer(output)
